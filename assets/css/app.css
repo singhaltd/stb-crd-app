@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Noto Sans Lao';
+    src: url('fonts/subset-NotoSansLao-SemiBold.woff2') format('woff2'),
+        url('fonts/subset-NotoSansLao-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-stretch: 100%;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0E81-0EDF, U+25CC;
+}
+@font-face {
+    font-family: 'Noto Sans Lao';
+    src: url('fonts/subset-NotoSansLao-SemiBold.woff2') format('woff2'),
+        url('fonts/subset-NotoSansLao-SemiBold.woff') format('woff');
+    font-weight: 100;
+    font-stretch: 100%;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0E81-0EDF, U+25CC;
+}
+
+/* ::-webkit-scrollbar {
+    width: 12px;
+} */
+
+/* ::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-image: radial-gradient(circle closest-side, rgb(4, 48, 192) 75%, white 80%, white 95%, transparent 100%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-image: radial-gradient(circle closest-side, white 95%, transparent 100%);
+} */

@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "@intlify/nuxt3": "^0.2.3",
+    "nuxt": "3.0.0-rc.8",
+    "tailwindcss": "^3.1.8",
+    "tailwindcss-print-styles": "^1.0.1"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.6.1",
+    "@heroicons/vue": "^1.0.6",
+    "@vee-validate/rules": "^4.5.11",
+    "daisyui": "^2.24.0",
+    "maska": "^1.5.0",
+    "moment": "^2.29.4",
+    "node-esm-loader": "^0.0.1",
+    "vee-validate": "^4.5.11",
+    "vue-currency-input": "^3.0.0",
+    "vue-the-mask": "^0.11.1",
+    "xlsx": "^0.18.5",
+    "yup": "^0.32.11"
+  }
+}

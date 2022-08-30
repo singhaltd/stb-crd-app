@@ -1,0 +1,1 @@
+export const useSnakeToast = (data) => useState<object>('snakeToast', () => data)

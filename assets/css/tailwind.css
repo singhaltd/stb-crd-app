@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    .smenu {
+
+    }
+    .smenu li {
+        @apply hover:bg-base-200 rounded-md
+    }
+    .fa-primary {
+        @apply text-primary
+    }
+}
