@@ -3,12 +3,19 @@ const token = useCookie("autKey");
 const route = useRoute();
 const router = useRouter();
 const BaseApi = useRuntimeConfig().public.BASE_URL_API;
-definePageMeta({
+try {
+} catch (e) {}
+useHead({
   title: "Dashboard",
+});
+definePageMeta({
   middleware: ["auth"],
 });
 const qcustomer = ref("");
-const [{ data: workflow }, { data: exreate }] = await Promise.all([
+const [
+  { refresh: rfworkflow, pending: dpworkflow, data: workflow },
+  { refresh: rfexreate, pending: dpexreate, data: exreate },
+] = await Promise.all([
   useFetch(`${BaseApi}workflow`, {
     headers: {
       Authorization: `Bearer ${token.value}`,
@@ -20,10 +27,14 @@ const [{ data: workflow }, { data: exreate }] = await Promise.all([
     },
   }),
 ]);
+onMounted(() => {
+  rfworkflow();
+  rfexreate();
+});
 </script>
 <template>
   <div class="mt-2 px-2">
-    <div class="stats shadow w-full">
+    <div class="stats shadow w-full" v-if="!dpworkflow">
       <div class="stat">
         <div class="stat-figure text-secondary">
           <svg
@@ -88,7 +99,7 @@ const [{ data: workflow }, { data: exreate }] = await Promise.all([
         </div>
       </div>
     </div>
-    <section class="mt-5">
+    <section class="mt-5" v-if="!dpexreate">
       <p class="text-md py-3">ອັດຕາແລກປ່ຽນ</p>
       <div class="overflow-x-auto max-w-[400px]">
         <table class="table w-full table-compact">

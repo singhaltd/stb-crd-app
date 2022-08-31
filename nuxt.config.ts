@@ -2,7 +2,6 @@ import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-    ssr:true,
     modules: ['@intlify/nuxt3'],
     runtimeConfig: {
         secretKey: '', // variable that can only be accessed on the server side

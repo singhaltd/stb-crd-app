@@ -93,11 +93,14 @@ const createUser = async () => {
     .catch((err) => {});
 };
 
-refresh();
+
 
 const getUsers = () => {
   refresh();
 };
+onMounted(() => {
+  refresh();
+});
 </script>
 <template>
   <div class="w-full mt-5 px-5">
